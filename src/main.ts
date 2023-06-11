@@ -15,6 +15,11 @@ export class App {
   n: number = 10;
   numbers: number[];
 
+  constructor(){
+    this.update();
+    this.numbers =[];
+  }
+
   update(){
     this.numbers = [];
     for(let i=1; i<=this.n; i++){

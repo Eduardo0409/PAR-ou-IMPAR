@@ -1,2 +1,19 @@
 <h1>{{name}}</h1>
-<input type="number" 
+<input type="number" [(ngModel)]="n" />
+<button (click) ="update()"> Update </button>
+<hr />
+<table border="1">
+  <tr>
+    <th>Index</th>
+    <th>Numeros</th>
+    <th>PAR ou IMPAR</th>
+  </tr>
+  <tr *ngFor="let n of numbers; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{n}}</td>
+    <td>
+      <span *ngIf= "n%2==0"> PAR</span>
+      <span *ngIf= "n%2!=0"> IMPAR</span>
+    </td>
+  </tr>
+</table>
